@@ -1,0 +1,129 @@
+.window
+  border-radius: 10px
+
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6)
+  user-select: none
+  background-color: rgb(53, 53, 58)
+  overflow: hidden
+  border: 1px solid rgb(53, 53, 58)
+
+  header
+    width: 100%
+    text-align: center
+    font-weight: 600
+    line-height: 30px
+    // background-color: rgba(53, 53, 58, 1)
+    cursor: move
+    z-index: 2
+
+  &::before
+    position: absolute
+    content: ' '
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    border-radius: 6px
+    // backdrop-filter: blur(10px)
+
+  .content
+    user-select: contain
+    border: none
+    width: 100%
+    height: calc(100% - 30px)
+    // padding: 10px
+
+  .content *
+    user-select: text
+
+  [data-close]
+    width: 12px
+    height: 12px
+    border-radius: 100%
+    position: absolute
+    background-color: red
+    top: 8px
+    left: 8px
+    cursor: pointer
+
+  [data-top],
+  [data-left],
+  [data-right],
+  [data-bottom],
+  [data-topleft],
+  [data-topright],
+  [data-bottomleft],
+  [data-bottomright]
+    position: absolute
+
+  [data-topleft],
+  [data-topright],
+  [data-bottomleft],
+  [data-bottomright]
+    width: 20px
+    height: 20px
+
+  [data-top]
+    top: -10px
+
+  [data-left]
+    left: -10px
+
+  [data-right]
+    right: -10px
+
+  [data-bottom]
+    bottom: -10px
+
+  [data-top],
+  [data-bottom]
+    height: 20px
+    left: -10px
+    right: -10px
+
+  [data-left],
+  [data-right]
+    width: 20px
+    top: -10px
+    bottom: -10px
+
+  [data-topleft],
+  [data-topright]
+    top: -10px
+
+  [data-bottomleft],
+  [data-bottomright]
+    bottom: -10px
+
+  [data-topleft],
+  [data-bottomleft]
+    left: -10px
+
+  [data-topright],
+  [data-bottomright]
+    right: -10px
+
+  [data-top]
+    cursor: n-resize
+
+  [data-left]
+    cursor: w-resize
+
+  [data-right]
+    cursor: e-resize
+
+  [data-bottom]
+    cursor: s-resize
+
+  [data-topleft]
+    cursor: nw-resize
+
+  [data-topright]
+    cursor: ne-resize
+
+  [data-bottomleft]
+    cursor: sw-resize
+
+  [data-bottomright]
+    cursor: se-resize
